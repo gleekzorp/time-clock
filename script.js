@@ -10,20 +10,18 @@ let breakTime = 0;
 
 start.addEventListener('click', () => {
   timeCounter();
+  breakTimeCounter();
   toggleDiv(start)
   toggleDiv(pause)
 })
 
-pause.addEventListener('click', (e) => {
-  // e.preventDefault();
+pause.addEventListener('click', () => {
   onBreak = true;
   toggleDiv(pause)
   toggleDiv(resume)
-  breakTimeCounter();
 })
 
-resume.addEventListener('click', (e) => {
-  // e.preventDefault();
+resume.addEventListener('click', () => {
   onBreak = false;
   toggleDiv(pause)
   toggleDiv(resume)
