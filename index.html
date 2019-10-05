@@ -7,10 +7,18 @@
   <title>Time Clock</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="clock-wrapper">
+    <div class="lunch-break-wrapper not-visible">      
+      <div class="lunch-break-text">LUNCH</div>
+      <div>
+        <i class="material-icons lunch-break-text">fastfood</i>
+      </div>
+      <div class="lunch-break-text">BREAK</div>
+    </div>
     <div class="clock-container">
       <div id="clock">0:00</div>
       <div>
@@ -20,6 +28,7 @@
       </div>
       <div id="on-break-clock"></div>
     </div>
+    <div class="spacer"></div>
   </div>
   <script src="./script.js"></script>
 </body>

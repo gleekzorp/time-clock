@@ -3,6 +3,7 @@ const onBreakClock = document.getElementById('on-break-clock');
 const pause = document.getElementById('pause');
 const resume = document.getElementById('resume');
 const start = document.getElementById('start');
+const lunchBreakText = document.querySelector('.lunch-break-wrapper')
 let onBreak = false;
 let time = 0;
 let breakTime = 0;
@@ -19,12 +20,14 @@ pause.addEventListener('click', () => {
   onBreak = true;
   toggleDiv(pause)
   toggleDiv(resume)
+  toggleVisibility(lunchBreakText)
 })
 
 resume.addEventListener('click', () => {
   onBreak = false;
   toggleDiv(pause)
   toggleDiv(resume)
+  toggleVisibility(lunchBreakText)
 })
 
 let timeCounter = function() {
@@ -59,4 +62,8 @@ function formatTime(seconds) {
 
 function toggleDiv(div) {
   div.classList.toggle("hidden")
+}
+
+function toggleVisibility(div) {
+  div.classList.toggle("not-visible")
 }
